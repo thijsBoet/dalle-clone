@@ -52,13 +52,16 @@ const CreatePost = () => {
 			setLoading(true);
 
 			try {
-				const response = await fetch('http://localhost:8080/api/v1/posts', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify(form),
-				});
+				const response = await fetch(
+					'https://dalle-ejcv.onrender.com/api/v1/posts',
+					{
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(form),
+					}
+				);
 
 				const data = await response.json();
 				navigate(`/`);
