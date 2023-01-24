@@ -23,7 +23,9 @@ const startServer = async () => {
 	try {
 		connectDB(process.env.MONGODB_URL);
 		app.listen(process.env.PORT, () =>
-			console.log(`Server is running on http://localhost:${process.env.PORT}`)
+			console.log(
+				`Server is running on https://dalle-ejcv.onrender.com:${process.env.PORT}`
+			)
 		);
 	} catch (error) {
 		console.log(error);
